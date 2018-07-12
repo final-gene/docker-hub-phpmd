@@ -26,7 +26,7 @@ version: 2
         run:
           name: Build application Docker image
           command: |
-            docker build --tag box-builder:$VERSION $VERSION/
+            docker build --tag phpmd:$VERSION $VERSION/
       -
         run:
           name: List created images
