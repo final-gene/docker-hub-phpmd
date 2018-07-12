@@ -12,7 +12,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN curl -LSs "https://github.com/phpmd/phpmd/archive/${PHPMD_VERSION}.tar.gz" | tar -xz
 
-WORKDIR /opt/phpmd-${PHPMD_VERSION}
+WORKDIR /opt/phpmd-"${PHPMD_VERSION}"
 
 RUN curl -LSs http://getcomposer.org/installer | php \
     && COMPOSER_ALLOW_SUPERUSER=1 php composer.phar install --no-dev --optimize-autoloader \
