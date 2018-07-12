@@ -1,7 +1,7 @@
-# Coverage check
+# PHP mess detector
 [![CircleCI](https://circleci.com/gh/final-gene/docker-hub-phpmd/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-phpmd/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4cf4be3e6d6540c0a1c0d72a239ae01b)](https://www.codacy.com/app/final-gene/docker-hub-phpmd?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-phpmd&amp;utm_campaign=Badge_Grade)
 
-This is a image to run [phpmd](https://phpmd.org).
+This is a image to run [PHP mess detector](https://phpmd.org).
 
 ## Supported tags and respective Dockerfile links
 * `2.6`, `latest` [(2.6/Dockerfile)](https://github.com/finalgene/docker-hub-phpmd/blob/master/2.6/Dockerfile)
@@ -16,7 +16,7 @@ docker run \
     finalgene/phpmd
 ```
 
-For further information take a look at the [official phpmd site](https://phpmd.org).
+For further information take a look at the [official PHP mess detector site](https://phpmd.org).
 
 ## Quick reference
 * **Where to get help:**
