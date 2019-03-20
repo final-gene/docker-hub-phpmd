@@ -3,9 +3,6 @@
 
 This is a image to run [PHP mess detector](https://phpmd.org).
 
-## Supported tags and respective Dockerfile links
-* `2.6`, `latest` [(2.6/Dockerfile)](https://github.com/finalgene/docker-hub-phpmd/blob/master/2.6/Dockerfile)
-
 ## How to use this image
 Run the `phpmd` image:
 

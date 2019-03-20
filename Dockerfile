@@ -1,12 +1,12 @@
-FROM php:7.2-cli-alpine3.7
+FROM php:7.3-cli-alpine3.9
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV PHPMD_VERSION 2.6.0
+ENV PHPMD_VERSION=2.6.0
 
 WORKDIR /opt
 
-RUN apk add --no-cache --virtual=.build-deps bash
+RUN apk add --no-cache bash=4.4.19-r1
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -18,8 +18,6 @@ RUN curl -LSs http://getcomposer.org/installer | php \
     && COMPOSER_ALLOW_SUPERUSER=1 php composer.phar install --no-dev --optimize-autoloader \
     && rm composer.phar \
     && ln -s "$(realpath src/bin/phpmd)" /usr/local/bin/phpmd
-
-RUN apk del .build-deps
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 

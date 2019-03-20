@@ -1,29 +1,27 @@
 NAME = phpmd
 
-VERSIONS = 2.6
 
-.PHONY: build
-build: ${VERSIONS}
-
-.PHONY: ${VERSIONS}
-${VERSIONS}:
+.PHONY: lint
+lint:
 	@echo "Build ${@}"
 
+.PHONY: build
+build: lint
 	@docker run \
 		--rm \
 		--volume "$(shell pwd)":/app \
 		finalgene/hadolint \
-		${@}/Dockerfile
+		Dockerfile
 
 	@docker build \
 		--no-cache \
-		--tag finalgene/${NAME}:${@}-dev \
-		${@}/
+		--tag finalgene/${NAME}:dev \
+		.
 
-	@docker images finalgene/${NAME}:${@}-dev
+	@docker images finalgene/${NAME}:dev
 
 .PHONY: clean
 clean:
 	-@docker rmi \
 		--force \
-		$(shell docker images finalgene/${NAME}:*-dev -q)
+		$(shell docker images finalgene/${NAME}:dev -q)
