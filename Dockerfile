@@ -1,12 +1,13 @@
-FROM php:7.3-cli-alpine3.9
+FROM php:7.3-cli-alpine3.10
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV PHPMD_VERSION=2.6.0
+ENV PHPMD_VERSION=2.7.0
 
 WORKDIR /opt
 
-RUN apk add --no-cache bash=4.4.19-r1
+# hadolint ignore=DL3018
+RUN apk add --no-cache bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
