@@ -2,7 +2,7 @@ FROM php:7.3-cli-alpine3.10
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV PHPMD_VERSION=2.7.0
+ENV PHPMD_VERSION=2.8.1
 
 WORKDIR /opt
 
