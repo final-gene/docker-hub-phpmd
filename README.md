@@ -1,5 +1,4 @@
 # PHP mess detector
-[![CircleCI](https://circleci.com/gh/final-gene/docker-hub-phpmd/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-phpmd/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/182bd5dac339431cb1caa154f9a1eed9)](https://www.codacy.com/app/final-gene/docker-hub-phpmd?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-phpmd&amp;utm_campaign=Badge_Grade)
 
 This is a image to run [PHP mess detector](https://phpmd.org).
 
