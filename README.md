@@ -1,6 +1,8 @@
 # PHP mess detector
 
-This is a image to run [PHP mess detector](https://phpmd.org).
+[![Docker build and publish](https://github.com/final-gene/docker-hub-phpmd/actions/workflows/publish.yml/badge.svg)](https://github.com/final-gene/docker-hub-phpmd/actions/workflows/publish.yml)
+
+This is an image to run [PHP mess detector](https://phpmd.org).
 
 ## How to use this image
 Run the `phpmd` image:
